@@ -10,7 +10,7 @@ namespace SRp.Services
 
         public InventoryService(PlayerInventoryContext db)
         {
-            _inventoryContext = db; 
+            _inventoryContext = db;  
         }
 
         //public async Task AddItemsAsync(long ownerSteamId, IEnumerable<ItemDto> addedItems, CancellationToken ct = default)
