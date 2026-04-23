@@ -9,7 +9,7 @@ using System.Text;
 using Microsoft.AspNetCore.Authorization;
 
 
-var builder = WebApplication.CreateBuilder(args);
+var builder = WebApplication.CreateBuilder(args); 
 
 builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection("Jwt"));
 builder.Services.Configure<RefreshOptions>(builder.Configuration.GetSection("Refresh"));
