@@ -15,7 +15,8 @@ namespace SRp.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<RefreshToken>().HasData();
+            modelBuilder.Entity<RefreshToken>()
+                .HasData();
         }
 
     }

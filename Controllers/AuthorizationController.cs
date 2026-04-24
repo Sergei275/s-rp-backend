@@ -143,7 +143,7 @@ namespace SRp.Controllers
                 return null;
 
             var player = await _authcontext.Players
-                .FirstOrDefaultAsync(p => p.SteamId64 == steamId64);
+                .FirstOrDefaultAsync(p => p.PlayerId == steamId64);
 
             if (player == null)
                 return null;
@@ -157,14 +157,14 @@ namespace SRp.Controllers
                 return null;
 
             var player = await _authcontext.Players
-                     .FirstOrDefaultAsync(p => p.SteamId64 == steamId64);
+                     .FirstOrDefaultAsync(p => p.PlayerId == steamId64);
 
             if (player != null)
                 return null;
 
             Player newPlayer = new();
             newPlayer.CreatedAt = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
-            newPlayer.SteamId64 = steamId64;
+            newPlayer.PlayerId = steamId64;
             _authcontext.Players.Add(newPlayer);
             await _authcontext.SaveChangesAsync();
 
