@@ -5,3 +5,6 @@
 /appsettings.json
 /appsettings.Development.json
 /.vs
+/bin/codex
+/obj/codex
+/obj/codex_test
