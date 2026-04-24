@@ -79,6 +79,9 @@ builder.Services.AddDbContext<SessionContext>(options
 builder.Services.AddDbContext<RefreshTokenContext>(options
     => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddDbContext<CharactersContext>(options
+    => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 builder.Services.AddDbContext<PlayerInventoryContext>(options
     => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 

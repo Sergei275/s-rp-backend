@@ -15,13 +15,20 @@ namespace SRp.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<Character>()
-                .HasIndex(character => new
+            modelBuilder.Entity<Player>()
+                .ToTable("Players");
+
+            modelBuilder.Entity<Character>(entity =>
+            {
+                entity.ToTable("Characters");
+
+                entity.HasIndex(character => new
                 {
                     character.PlayerId,
                     character.CharacterId
                 })
                 .IsUnique();
+            });
         }
     }
 }

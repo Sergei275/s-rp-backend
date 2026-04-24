@@ -50,5 +50,51 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "s_rp_backend.Controllers.CharacterController",
+    "Method": "CreateCharacter",
+    "RelativePath": "api/auth/characters/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "characterDto",
+        "Type": "SRp.Models.CharacterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SRp.Models.CharacterDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "s_rp_backend.Controllers.CharacterController",
+    "Method": "GetCharacters",
+    "RelativePath": "api/auth/characters/get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SRp.Models.CharacterDto, s-rp-backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

@@ -15,7 +15,9 @@ namespace SRp.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<Player>().HasData();
+            modelBuilder.Entity<Player>()
+                .ToTable("Players")
+                .HasData();
         }
     }
 }
